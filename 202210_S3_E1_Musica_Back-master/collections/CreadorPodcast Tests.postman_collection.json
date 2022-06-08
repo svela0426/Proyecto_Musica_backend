@@ -1,0 +1,1095 @@
+{
+	"info": {
+		"_postman_id": "cae6654e-80d6-4419-a16b-2c8879da9fe5",
+		"name": "CreadorPodcast Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"postman.setGlobalVariable('creadorId', data.id);",
+							"tests[\"no genera error en el post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Esteban\",\n    \"nacionalidad\": \"Colombia\",\n    \"imagen\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear podcast 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"postman.setGlobalVariable('podcastId1', data.id);",
+							"tests[\"no genera error en el post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"Podcast 1\",\n    \"calificacion\": \"Buena\",\n    \"imagen\": \"\",\n    \"descripcion\": \"esto es una descripcion\",\n    \"precio\": 2.2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear podcast 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"postman.setGlobalVariable('podcastId2', data.id);",
+							"tests[\"no genera error en el post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"Podcast 1\",\n    \"calificacion\": \"Buena\",\n    \"imagen\": \"\",\n    \"descripcion\": \"esto es una descripcion\",\n    \"precio\": 2.2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear podcast 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"postman.setGlobalVariable('podcastId3', data.id);",
+							"tests[\"no genera error en el post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"Podcast 3\",\n    \"calificacion\": \"Buena\",\n    \"imagen\": \"\",\n    \"descripcion\": \"esto es una descripcion\",\n    \"precio\": 2.2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear podcast 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"postman.setGlobalVariable('podcastId4', data.id);",
+							"tests[\"no genera error en el post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"Podcast 4\",\n    \"calificacion\": \"Buena\",\n    \"imagen\": \"\",\n    \"descripcion\": \"esto es una descripcion\",\n    \"precio\": 2.2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear podcast 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"postman.setGlobalVariable('podcastId5', data.id);",
+							"tests[\"no genera error en el post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"Podcast 5\",\n    \"calificacion\": \"Buena\",\n    \"imagen\": \"\",\n    \"descripcion\": \"esto es una descripcion\",\n    \"precio\": 2.2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asociar un podcast con un creador invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No asocia un podcast a un creador inexistente\"] = responseCode.code = 404;",
+							"tests[\"Mensaje correcto de error\"] = responseBody.has(\"The creador with the given id was not found\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/0/podcasts/{{podcastId1}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"0",
+						"podcasts",
+						"{{podcastId1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asociar un podcast invalido con un creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No asocia un podcast inexistente a un creador\"] = responseCode.code = 404;",
+							"tests[\"Mensaje correcto de error\"] = responseBody.has(\"The podcast with the given id was not found\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/0",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asociar  podcast 1 con un creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el post de la asociacion entre creador y podcast\"] = responseCode.code = 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/{{podcastId1}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"{{podcastId1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asociar podcast 2 con nombre repetido con un creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No asocia un podcast con un nombre repetido a un creador\"] = responseCode.code = 404;",
+							"tests[\"Mensaje correcto de error\"] = responseBody.has(\"Podcast with that title has already been created in the creator.\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/{{podcastId2}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"{{podcastId2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asociar podcast 3 con un creador 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el post de la asociacion entre creador y podcast\"] = responseCode.code = 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/{{podcastId3}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"{{podcastId3}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get podcasts of creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"tests[\"No genera error en el get all de podcasts de un creador\"] = responseCode.code = 200;",
+							"tests[\"creadores - podcasts count\"] = data.length >= 1;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desasociar podcast 1 of creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el delete\"] = responseCode.code === 204;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/{{podcastId1}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"{{podcastId1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get podcast invalido of creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No coge un podcast inexistente de un creador\"] = responseCode.code = 404;",
+							"tests[\"Mensaje correcto de error\"] = responseBody.has(\"The creator does not contain the podcast.\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/{{podcastId1}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"{{podcastId1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get podcast of creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(responseBody);",
+							"var data = JSON.parse(responseBody);",
+							"tests[\"No genera error en el get de un podcast de un creador\"] = responseCode.code = 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/{{podcastId3}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"{{podcastId3}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar podcasts of creador invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No se asocian podcasts a un creador que no existe\"] = responseCode.code = 404;",
+							"tests[\"Mensaje correcto de error\"] = responseBody.has(\"The creador with the given id was not found\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": {{podcastId4}}\n    },\n\n    {\n        \"id\": {{podcastId5}}\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/0/podcasts/",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"0",
+						"podcasts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar podcasts con nombres repetidos of creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No asocia un podcast con un nombre repetido a un creador\"] = responseCode.code = 404;",
+							"tests[\"Mensaje correcto de error\"] = responseBody.has(\"Podcast with that title has already been created in the creator.\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": {{podcastId1}}\n    },\n\n    {\n        \"id\": {{podcastId2}}\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar podcast 1 to 4 and 5 of creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el put de podcasts al creador\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": {{podcastId4}}\n    },\n\n    {\n        \"id\": {{podcastId5}}\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desasociar podcast of creador invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No desasocia un podcast de un creador que no existe\"] = responseCode.code === 404;",
+							"tests[\"Mensaje correcto de error\"] = responseBody.has(\"The creador with the given id was not found\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/0/podcasts/{{podcastId5}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"0",
+						"podcasts",
+						"{{podcastId5}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desasociar podcast invalido of creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No desasocia un podcast que no existe de un creador\"] = responseCode.code === 404;",
+							"tests[\"Mensaje correcto de error\"] = responseBody.has(\"The podcast with the given id was not found\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/0",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desasociar podcast 4 of creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el delete\"] = responseCode.code === 204;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/{{podcastId4}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"{{podcastId4}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desasociar podcast 5 of creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el delete\"] = responseCode.code === 204;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}/podcasts/{{podcastId5}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}",
+						"podcasts",
+						"{{podcastId5}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar podcast 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el delete\"] = responseCode.code === 204;",
+							"pm.globals.unset('podcastId1');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts/{{podcastId1}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts",
+						"{{podcastId1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar podcast 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el delete\"] = responseCode.code === 204;",
+							"pm.globals.unset('podcastId2');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts/{{podcastId2}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts",
+						"{{podcastId2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar podcast 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el delete\"] = responseCode.code === 204;",
+							"pm.globals.unset('podcastId3');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts/{{podcastId3}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts",
+						"{{podcastId3}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar podcast 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el delete\"] = responseCode.code === 204;",
+							"pm.globals.unset('podcastId4');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts/{{podcastId4}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts",
+						"{{podcastId4}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar podcast 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el delete\"] = responseCode.code === 204;",
+							"pm.globals.unset('podcastId5');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/podcasts/{{podcastId5}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"podcasts",
+						"{{podcastId5}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar creador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"No genera error en el delete\"] = responseCode.code === 204;",
+							"pm.globals.unset('creadorId');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/creadores/{{creadorId}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"creadores",
+						"{{creadorId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
